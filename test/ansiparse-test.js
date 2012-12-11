@@ -29,9 +29,13 @@ var dataSets = {
     input: '\033\[42mhello world\033\[49m',
     output: [{ text: 'hello world', background: 'green' }]
   },
-  inverse: {
+  'inverse red': {
     input: 'hello world'.red.inverse,
-    output: [{ text: 'hello world', background: 'red' }]
+    output: [{ text: 'hello world', background: 'red', foreground: 'black' }]
+  },
+  inverse: {
+    input: 'inverse'.inverse,
+    output: [{ text: 'inverse', background: 'white', foreground: 'black' }]
   },
   boldAndColor: {
     input: 'hello world'.red.bold,
@@ -74,6 +78,22 @@ var dataSets = {
   'backspace across blocks': {
     input: 'hello'.green + ' ' + 'worz\b\b\b\b\bl    \b\b\b\b'.red,
     output: [{ text: 'hello', foreground: 'green' }, { text: 'l', foreground: 'red' }]
+  },
+  'zebra style': {
+    input: 'hello zebra'.zebra,
+    output: [
+      { text: 'h' },
+      { text: 'e', background: 'white', foreground: 'black' },
+      { text: 'l' },
+      { text: 'l', background: 'white', foreground: 'black' },
+      { text: 'o' },
+      { text: ' ', background: 'white', foreground: 'black' },
+      { text: 'z' },
+      { text: 'e', background: 'white', foreground: 'black' },
+      { text: 'b' },
+      { text: 'r', background: 'white', foreground: 'black' },
+      { text: 'a' },
+    ]
   }
 };
 
