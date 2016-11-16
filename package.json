@@ -16,7 +16,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "colors": "0.6.X",
-    "vows": "0.6.x"
+    "colors": "~1.1.2",
+    "vows": "~0.8.1"
   }
 }
